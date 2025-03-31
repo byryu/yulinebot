@@ -78,7 +78,7 @@ function initApp() {
         liff.getProfile().then(profile => {
             const userDisplayName = profile.displayName;
             console.info("User name is", userDisplayName);
-            document.getElementById("greet").innerHTML = "你好, " + userDisplayName + " ౼ 感謝你的使用";
+            document.getElementById("greet").innerHTML = "你好~~, " + userDisplayName + " ౼ 感謝你的使用";
         }).catch((err) => {
             console.error("LIFF getProfile failed", err);
         });
