@@ -242,84 +242,27 @@ function sendLiffMessage() {
     liff.getProfile().then(profile => {
         const userDisplayName = profile.displayName;
         if (type == "profile") {
-            liff.sendMessages([{
-                type: "flex",
-                altText: "Profile " + userDisplayName,
-                contents: {
-                    type: "bubble",
-                    hero: {
-                        type: "image",
-                        url: profile.pictureUrl,
-                        size: "full",
-                        aspectRatio: "1:1",
-                        aspectMode: "cover",
-                        action: {
-                            type: "uri",
-                            uri: "line://app/2007166301-yJJ4zwLd?auto=yes&type=image&downloadUrl=" + profile.pictureUrl + "&previewUrl=" + profile.pictureUrl
+            liff.sendMessages([
+                {
+                  "type": "flex",
+                  "altText": "Profile",
+                  "contents": {
+                    "type": "bubble",
+                    "body": {
+                      "type": "box",
+                      "layout": "vertical",
+                      "contents": [
+                        {
+                          "type": "text",
+                          "text": "Hello, world!",
+                          "weight": "bold",
+                          "size": "xl"
                         }
-                    },
-                    body: {
-                        type: "box",
-                        layout: "vertical",
-                        contents: [{
-                                type: "text",
-                                text: userDisplayName,
-                                align: "center",
-                                weight: "bold",
-                                size: "xl"
-                            },
-                            {
-                                type: "box",
-                                layout: "vertical",
-                                margin: "lg",
-                                spacing: "sm",
-                                contents: [{
-                                    type: "text",
-                                    text: profile.statusMessage,
-                                    wrap: true,
-                                    color: "#666666",
-                                    size: "sm",
-                                    flex: 5
-                                }]
-                            }
-                        ]
-                    },
-                    footer: {
-                        type: "box",
-                        layout: "horizontal",
-                        spacing: "sm",
-                        contents: [{
-                                type: "button",
-                                style: "primary",
-                                height: "sm",
-                                color: "#02afff",
-                                action: {
-                                    type: "uri",
-                                    label: "Square",
-                                    uri: "https://page.line.me/283dtnqz"
-                                },
-                                flex: 1
-                            },
-                            {
-                                type: "button",
-                                style: "primary",
-                                height: "sm",
-                                action: {
-                                    type: "uri",
-                                    label: "Profile",
-                                    uri: "line://app/2007166301-yJJ4zwLd?type=profile"
-                                },
-                                flex: 2
-                            },
-                            {
-                                type: "spacer",
-                                size: "sm"
-                            }
-                        ],
-                        flex: 0
+                      ]
                     }
+                  }
                 }
-            }]).then(() => {
+            ]).then(() => {
                 console.log("Success sending message");
                 liff.closeWindow();
             }).catch((err) => {
