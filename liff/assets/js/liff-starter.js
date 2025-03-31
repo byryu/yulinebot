@@ -265,7 +265,7 @@ function sendLiffMessage() {
                         aspectMode: "cover",
                         action: {
                             type: "uri",
-                            uri: "line://app/2002197923-oyY6wJ68?auto=yes&type=image&downloadUrl=" + profile.pictureUrl + "&previewUrl=" + profile.pictureUrl
+                            uri: "line://app/2007166301-yJJ4zwLd?auto=yes&type=image&downloadUrl=" + profile.pictureUrl + "&previewUrl=" + profile.pictureUrl
                         }
                     },
                     body: {
@@ -306,7 +306,7 @@ function sendLiffMessage() {
                                 action: {
                                     type: "uri",
                                     label: "Square",
-                                    uri: "https://lin.ee/3fKeC6h"
+                                    uri: "https://page.line.me/283dtnqz"
                                 },
                                 flex: 1
                             },
@@ -317,7 +317,7 @@ function sendLiffMessage() {
                                 action: {
                                     type: "uri",
                                     label: "Profile",
-                                    uri: "line://app/2002197923-oyY6wJ68?type=profile"
+                                    uri: "line://app/2007166301-yJJ4zwLd?type=profile"
                                 },
                                 flex: 2
                             },
