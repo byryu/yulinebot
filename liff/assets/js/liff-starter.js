@@ -54,7 +54,7 @@ function initLiff() {
                 if (getParameterByName("auto") == "yes") {
                     sendLiffMessage();
                 }
-                document.getElementById("greet").innerHTML = "你好, " + userDisplayName + " ౼ Nice to meet you";
+                document.getElementById("greet").innerHTML = "早安你好, " + userDisplayName + " ౼ Nice to meet you";
             }).catch((err) => {
                 console.error("LIFF getProfile failed", err);
             });
